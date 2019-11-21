@@ -1,7 +1,7 @@
 FROM nnurphy/deb
 
 ENV HOME=/root
-ENV GOROOT=/opt/go GOPATH=${HOME}/go GO_VERSION=1.13.3
+ENV GOROOT=/opt/go GOPATH=${HOME}/go GO_VERSION=1.13.4
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
 RUN set -ex \
   ; cd /opt \
