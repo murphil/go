@@ -3,6 +3,7 @@ FROM nnurphy/deb
 ENV HOME=/root
 ENV GOROOT=/opt/go GOPATH=${HOME}/go GO_VERSION=1.13.7
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
+ENV GO111MODULE=auto
 RUN set -ex \
   ; cd /opt \
   #; ssh up "cat ~/pub/Platform/go${GO_VERSION}.linux-amd64.tar.gz" \
@@ -29,4 +30,5 @@ RUN set -ex \
   ; go get -x -d github.com/stamblerre/gocode \
     ; go build -o gocode-gomod github.com/stamblerre/gocode \
     ; mv gocode-gomod $GOPATH/bin/ \
-  ; rm -rf $(go env GOCACHE)/*
+  ; rm -rf $(go env GOCACHE)/* \
+  ; go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
