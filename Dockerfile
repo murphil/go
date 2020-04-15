@@ -10,6 +10,7 @@ RUN set -ex \
   ; wget -q -O- https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz \
       | tar xzf - \
   ; go get -u -v \
+      github.com/kardianos/govendor \
       gonum.org/v1/gonum/mat \
       github.com/mdempsky/gocode \
       github.com/uudashr/gopkgs/cmd/gopkgs \
