@@ -11,6 +11,7 @@ RUN set -ex \
       | tar xzf - \
   ; go get -u -v \
       github.com/kardianos/govendor \
+      github.com/gin-gonic/gin \
       gonum.org/v1/gonum/mat \
       github.com/mdempsky/gocode \
       github.com/uudashr/gopkgs/cmd/gopkgs \
