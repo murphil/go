@@ -10,7 +10,7 @@ RUN set -ex \
   ; wget -q -O- https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz \
       | tar xzf - \
   ; go get -u -v \
-      github.com/spf13/viper
+      github.com/spf13/viper \
       github.com/kardianos/govendor \
       github.com/gin-gonic/gin \
       github.com/jinzhu/gorm \
