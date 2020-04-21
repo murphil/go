@@ -11,6 +11,7 @@ RUN set -ex \
       | tar xzf - \
   ; go get -u -v \
       github.com/spf13/viper \
+      github.com/sirupsen/logrus \
       github.com/kardianos/govendor \
       github.com/gin-gonic/gin \
       github.com/jinzhu/gorm \
