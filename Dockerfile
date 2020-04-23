@@ -1,4 +1,4 @@
-FROM nnurphy/deb
+FROM nnurphy/ub
 
 ENV HOME=/root
 ENV GOROOT=/opt/go GOPATH=${HOME}/go GO_VERSION=1.14.2
