@@ -1,7 +1,8 @@
 FROM nnurphy/ub
 
+ENV GO_VERSION=1.14.4
 ENV HOME=/root
-ENV GOROOT=/opt/go GOPATH=${HOME}/go GO_VERSION=1.14.4
+ENV GOROOT=/opt/go GOPATH=${HOME}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
 ENV GO111MODULE=auto
 RUN set -ex \
