@@ -1,6 +1,6 @@
 FROM nnurphy/ub
 
-ENV GO_VERSION=1.14.4
+ENV GO_VERSION=1.14.5
 ENV HOME=/root
 ENV GOROOT=/opt/go GOPATH=${HOME}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
