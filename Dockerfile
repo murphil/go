@@ -30,5 +30,6 @@ RUN set -ex \
   ; go get -x -d github.com/stamblerre/gocode \
     ; go build -o gocode-gomod github.com/stamblerre/gocode \
     ; mv gocode-gomod $GOPATH/bin/ \
+  ; GO111MODULE=on go get golang.org/x/tools/gopls@latest \
   ; rm -rf $(go env GOCACHE)/* \
   ; go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
