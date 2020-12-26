@@ -1,13 +1,12 @@
 FROM nnurphy/ub
 
-ENV GO_VERSION=1.15.5
+ENV GO_VERSION=1.15.6
 ENV HOME=/root
 ENV GOROOT=/opt/go GOPATH=${HOME}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
 ENV GO111MODULE=auto
 RUN set -ex \
   ; cd /opt \
-  #; ssh up "cat ~/pub/Platform/go${GO_VERSION}.linux-amd64.tar.gz" \
   ; wget -q -O- https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz \
       | tar xzf - \
   ; go get -u -v \
