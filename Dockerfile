@@ -15,7 +15,6 @@ RUN set -ex \
       github.com/kardianos/govendor \
       github.com/gin-gonic/gin \
       github.com/jinzhu/gorm \
-      gonum.org/v1/gonum/mat \
       github.com/mdempsky/gocode \
       github.com/uudashr/gopkgs/cmd/gopkgs \
       github.com/ramya-rao-a/go-outline \
