@@ -1,6 +1,6 @@
 FROM nnurphy/ub
 
-ENV GOROOT=/opt/go GOPATH=${HOME}/go
+ENV GOROOT=/opt/go GOPATH=${HOME:-/root}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
 ENV GO111MODULE=auto
 RUN set -ex \
