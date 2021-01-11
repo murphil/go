@@ -30,3 +30,8 @@ RUN set -ex \
   ; GO111MODULE=on go get golang.org/x/tools/gopls@latest \
   ; rm -rf $(go env GOCACHE)/* \
   ; go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+
+RUN set -eux \
+  ; nvim_home=/etc/skel/.config/nvim \
+  ; $nvim_home/plugged/vimspector/install_gadget.py --enable-go \
+  ; rm -f $nvim_home/plugged/vimspector/gadgets/linux/download/vscode-go/*/*.vsix
