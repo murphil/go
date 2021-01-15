@@ -4,6 +4,9 @@ ENV GOROOT=/opt/go GOPATH=${HOME:-/root}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
 ENV GO111MODULE=on
 RUN set -ex \
+  ; apt-get update \
+  ; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends gcc \
+  ; apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
   ; cd /opt \
   ; GO_VERSION=$(curl https://golang.org/VERSION?m=text) \
   ; wget -q -O- https://dl.google.com/go/${GO_VERSION}.linux-amd64.tar.gz \
