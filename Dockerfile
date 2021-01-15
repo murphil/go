@@ -27,7 +27,7 @@ RUN set -ex \
     ; mv gocode-gomod $GOPATH/bin/ \
   ; go get golang.org/x/tools/gopls@latest \
   ; rm -rf $(go env GOCACHE)/* \
-  ; go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+  ; go env -w GOPROXY=https://goproxy.cn,direct
 
 RUN set -eux \
   ; nvim_home=/etc/skel/.config/nvim \
