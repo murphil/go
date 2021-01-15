@@ -22,7 +22,8 @@ RUN set -ex \
       github.com/sqs/goreturns \
       honnef.co/go/tools/... \
       github.com/mgechev/revive \
-      github.com/derekparker/delve/cmd/dlv 2>&1 \
+      github.com/go-delve/delve/cmd/dlv \
+      2>&1 \
   ; go get -x -d github.com/stamblerre/gocode \
     ; go build -o gocode-gomod github.com/stamblerre/gocode \
     ; mv gocode-gomod $GOPATH/bin/ \
