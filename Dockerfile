@@ -14,7 +14,6 @@ RUN set -ex \
       github.com/sirupsen/logrus \
       github.com/gin-gonic/gin \
       github.com/jinzhu/gorm \
-      github.com/uudashr/gopkgs/cmd/gopkgs \
       github.com/ramya-rao-a/go-outline \
       github.com/acroca/go-symbols \
       github.com/rogpeppe/godef \
@@ -24,9 +23,6 @@ RUN set -ex \
       github.com/mgechev/revive \
       github.com/go-delve/delve/cmd/dlv \
       2>&1 \
-  ; go get -x -d github.com/stamblerre/gocode \
-    ; go build -o gocode-gomod github.com/stamblerre/gocode \
-    ; mv gocode-gomod $GOPATH/bin/ \
   ; go get golang.org/x/tools/gopls@latest \
   ; rm -rf $(go env GOCACHE)/* \
   ; go env -w GOPROXY=https://goproxy.cn,direct
