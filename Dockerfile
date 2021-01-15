@@ -2,6 +2,7 @@ FROM nnurphy/ub
 
 ENV GOROOT=/opt/go GOPATH=${HOME:-/root}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
+ENV GO111MODULE=on
 RUN set -ex \
   ; cd /opt \
   ; GO_VERSION=$(curl https://golang.org/VERSION?m=text) \
