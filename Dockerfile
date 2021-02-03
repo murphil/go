@@ -14,11 +14,6 @@ RUN set -ex \
       github.com/sirupsen/logrus \
       github.com/gin-gonic/gin \
       github.com/jinzhu/gorm \
-      github.com/ramya-rao-a/go-outline \
-      github.com/acroca/go-symbols \
-      github.com/rogpeppe/godef \
-      github.com/zmb3/gogetdoc \
-      github.com/sqs/goreturns \
       honnef.co/go/tools/... \
       github.com/mgechev/revive \
       github.com/go-delve/delve/cmd/dlv \
