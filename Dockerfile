@@ -1,4 +1,4 @@
-FROM nnurphy/ub
+FROM nnurphy/sid
 
 ENV GOROOT=/opt/go GOPATH=${HOME:-/root}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
