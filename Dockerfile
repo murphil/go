@@ -11,6 +11,7 @@ RUN set -ex \
   ; go get -u -v \
       github.com/juju/errors \
       github.com/spf13/viper \
+      github.com/spf13/cobra \
       github.com/sirupsen/logrus \
       github.com/gin-gonic/gin \
       github.com/jinzhu/gorm \
