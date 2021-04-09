@@ -6,7 +6,7 @@ ENV GO111MODULE=on
 RUN set -ex \
   ; cd /opt \
   ; GO_VERSION=$(curl https://golang.org/VERSION?m=text) \
-  ; wget -q -O- https://dl.google.com/go/${GO_VERSION}.linux-amd64.tar.gz \
+  ; curl -sSL https://dl.google.com/go/${GO_VERSION}.linux-amd64.tar.gz \
       | tar xzf - \
   ; go get -u -v \
       github.com/juju/errors \
