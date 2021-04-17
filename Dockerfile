@@ -1,4 +1,4 @@
-FROM nnurphy/io
+FROM nashv1/io
 
 ENV GOROOT=/opt/go GOPATH=${HOME:-/root}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
