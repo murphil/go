@@ -3,7 +3,7 @@ FROM fj0rd/io
 ENV GOROOT=/opt/go GOPATH=${HOME:-/root}/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:$PATH
 ENV GO111MODULE=on
-RUN set -ex \
+RUN set -eux \
   ; cd /opt \
   ; GO_VERSION=$(curl https://golang.org/VERSION?m=text) \
   ; curl -sSL https://dl.google.com/go/${GO_VERSION}.linux-amd64.tar.gz \
